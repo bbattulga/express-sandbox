@@ -28,5 +28,5 @@ jobs:
     - run: npm i pm2 -g
     - run: pm2 --version
     - run: npm i
-    - run: start.sh
+    - run: pm2 delete -s express-server || : && pm2 start start.sh --name=express-server
       
