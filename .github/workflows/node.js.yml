@@ -26,6 +26,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm i
-    - run: pm2 delete all && pm2 start start.sh --name express-server
+    - run: pm2 delete all && pm2 start app.js --name express-server
       continue-on-error: true
-      
