@@ -28,5 +28,5 @@ jobs:
     - run: npm i pm2 -g
     - run: pm2 --version
     - run: npm i
-    - run: pm2 delete --silent express-sandbox && pm2 start start.sh --name express-sandbox
+    - run: pm2 stop express-server; pm2 start start.sh --name express-server
       
